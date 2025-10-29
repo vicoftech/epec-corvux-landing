@@ -7,8 +7,8 @@ frontend:
         - node -v
         - npm -v
         - ls -la
-        - echo "✅ Installing dependencies"
-        - npm install
+        - echo "✅ Installing dependencies (including devDependencies)"
+        - npm ci --include=dev
     build:
       commands:
         - echo "🚀 Building Next.js app"
