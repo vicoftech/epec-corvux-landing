@@ -3,36 +3,21 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Log Amplify environment
-        - echo "🏗️ Starting Amplify build in $(pwd)"
+        - echo "🧱 Starting Amplify build in $(pwd)"
         - node -v
         - npm -v
-
-        # Clean & install dependencies
-        - echo "🧹 Cleaning old builds"
-        - rm -rf .next node_modules
-        - echo "📦 Installing dependencies"
-        - npm ci
-        # or use npm install if ci fails
-        # - npm install
-
+        - ls -la
+        - echo "✅ Installing dependencies"
+        - npm install
     build:
       commands:
-        - echo "🚀 Starting Next.js production build"
-        # Force verbose error output
-        - set -e
-        - NODE_ENV=production npx next build || (echo "❌ Build failed, showing logs" && ls -la .next && exit 1)
-
+        - echo "🚀 Building Next.js app"
+        - npm run build || (echo "❌ Build failed" && exit 1)
   artifacts:
-    # Tell Amplify where the compiled app lives
     baseDirectory: .next
     files:
       - '**/*'
-
   cache:
-    # Cache dependencies and build output for faster builds
     paths:
       - node_modules/**/*
       - .next/cache/**/*
-      - .yarn/cache/**/*
-      - ~/.npm/**/*
