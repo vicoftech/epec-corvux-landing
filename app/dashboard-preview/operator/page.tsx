@@ -11,7 +11,6 @@ export default function OperatorDashboard() {
   return (
     <DashboardLayout
       title="Fleet Operations Dashboard"
-      subtitle="Monitor vessel performance and operational efficiency"
       user={{
         name: "Captain Sarah Chen",
         role: "Vessel Operator",

@@ -11,7 +11,6 @@ export default function SustainabilityOfficerDashboard() {
   return (
     <DashboardLayout
       title="Sustainability Dashboard"
-      subtitle="Monitor environmental performance and emissions compliance"
       user={{
         name: "Dr. Elena Rodriguez",
         role: "Sustainability Officer",

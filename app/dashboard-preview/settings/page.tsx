@@ -3,8 +3,9 @@
 import { DashboardLayout } from "@/components/dashboard/shared/dashboard-layout"
 
 export default function SettingsPreviewPage() {
+  const mockUser = { name: "user", role: "Admin" }
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Dashboard" user={mockUser}>
       <div className="space-y-8">
         {/* Header */}
         <div>

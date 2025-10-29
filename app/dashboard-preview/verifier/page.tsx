@@ -26,7 +26,6 @@ export default function VerifierDashboard() {
     <div className="min-h-screen bg-[#F7F6F3]">
       <DashboardLayout
         title=""
-        subtitle=""
         user={{
           name: "Ignacio Martínez",
           role: "Maritime Verifier",
